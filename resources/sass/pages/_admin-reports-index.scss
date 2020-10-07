@@ -1,0 +1,23 @@
+.motives-list ul {
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    margin: 2rem 1rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 2rem 0;
+        flex-wrap: wrap;
+        max-width: 65rem;
+    }
+
+    li {
+        flex: 0 0 auto;
+        margin: 0.2rem 0.4rem;
+    }
+}
+
+.reports-list{
+
+    margin-top: 1in;
+}

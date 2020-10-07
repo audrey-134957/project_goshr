@@ -1,0 +1,30 @@
+.ban-card {
+    &__pseudo-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    &__email-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    &__card-footer {
+        border-top: 0px;
+        padding: 1rem;
+    }
+
+    &__button {
+        margin: auto;
+    }
+}

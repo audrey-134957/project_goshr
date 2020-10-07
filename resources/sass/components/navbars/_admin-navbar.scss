@@ -1,0 +1,37 @@
+.admin-navbar{
+
+    grid-area: navbar;
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    background-color: $menu-color;
+    border-bottom:solid 1px $inactive-leaf-color;
+
+
+    &__image-figure.image.is-70xauto{
+        width: 70px;
+   
+    }
+    &__button{
+
+        &--menu{
+            @media screen and (min-width:1024px){
+                display: none;
+            }
+        }
+    }
+
+    &__link-name{
+        margin-left:0.5rem;
+
+        @media screen and (max-width:768px - 1px){
+            display: none;
+        }
+    }
+
+    &__icon{
+        font-size: 13px;
+    }
+}

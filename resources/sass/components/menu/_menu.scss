@@ -1,0 +1,76 @@
+.menu {
+    min-height: 100vh;
+    background-color: $menu-color;
+    position: fixed;
+    border: solid 1px $inactive-leaf-color;
+    border-left: none;
+    border-right: none;
+    width: 100vw;
+    top: 4.5rem;
+    z-index: 100;
+    grid-row: 2/3;
+    
+    @media screen and(min-width:768px) {
+        right: 0;
+        width: 350px;
+    }
+
+    @media screen and(min-width:1200px) {
+        top: 4.7rem;
+        border-left: solid 1px $admin-nav;
+    }
+
+    &__tab-pane {
+        display: none;
+        overflow: auto;
+        height: 79vh;
+    }
+
+    #menu:checked ~ .tab-content > .content-menu,
+    #notif:checked ~ .tab-content > .content-notif {
+        display: block;
+    }
+
+    &__link {
+        &:hover {
+            font-weight: $font-medium;
+        }
+
+        &--is-active {
+            font-weight: 700;
+        }
+
+        &--hide {
+            @media screen and(min-width:600px) {
+                display: none;
+            }
+        }
+    }
+
+    &__list-items {
+        line-height: 3rem;
+
+        &--is-header {
+            font-weight: $font-medium;
+        }
+
+        &--content {
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__notification-bullet{
+        color: $notification-color;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    &__notification {
+        font-size: 22px;
+        margin-left: 5px;
+    }
+
+    &__notification-text-no-notification{
+        margin:1rem;
+    }
+}

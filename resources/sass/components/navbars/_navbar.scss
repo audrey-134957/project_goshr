@@ -1,0 +1,113 @@
+.navbar {
+    background-color: white;
+    box-shadow: 0 1px 10px -1px $inactive-leaf-color;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+    column-gap: 1.5rem;
+
+    @media screen and (max-width: 600px - 1px) {
+        grid-template-columns: fit-content(70px) 1fr fit-content(35px);
+    }
+
+    @media screen and (min-width: 600px) {
+        grid-template-columns: 70px 200px 1fr fit-content(35px);
+    }
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 70px minmax(300px, 1fr) minmax(auto, 50rem) fit-content(400px);
+    }
+
+    &__logo {
+        width: 70px !important;
+    }
+
+    &__avatar {
+        // height: 35px;
+        // width: 35px;
+        // object-fit: cover;
+        cursor: pointer;
+    }
+
+    &__icon {
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__link {
+        padding: 0.5rem 0;
+        max-width: 250px;
+        display: flex;
+        justify-content: space-around;
+
+        @media screen and (max-width: 600px - 1px) {
+            display: none;
+        }
+
+        &:last-child {
+            margin-left: 2.5rem;
+        }
+        &:hover {
+            font-weight: 700;
+        }
+
+        &--is-active {
+            font-weight: 700;
+        }
+
+        &--is-login,
+        &--is-signup {
+            border-color: #167503;
+            font-weight: 900;
+
+            &:hover {
+                font-weight: 900;
+                border-color: #167503;
+            }
+        }
+
+        &--is-login {
+            background-color: #167503;
+            color: white;
+
+            &:hover {
+                background-color: darken(#167503, 3%);
+                color: white;
+            }
+
+            @media screen and (max-width: 768px - 1px) {
+                display: none;
+            }
+        }
+
+        &--is-signup {
+            background-color: white;
+            border-color: #167503;
+            color: #167503;
+            margin-left: 0.7rem;
+
+            &:hover {
+                background-color: darken(#fff, 1.5%);
+                color: #167503;
+            }
+            @media screen and (max-width: 1024px - 1px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.navbar__link,
+.search-form {
+    justify-self: center;
+}
+
+.search-form {
+    max-width: 35rem;
+    width: 100%;
+}

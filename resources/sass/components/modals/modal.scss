@@ -1,0 +1,81 @@
+.modal {
+
+    /* Carte modal */
+
+    &-card {
+        border-radius: 15px;
+    }
+
+    &-card-head{
+        text-align: center;
+    }
+
+    &-card-title{
+     font-weight: 700;   
+    }
+
+    &-card-body,
+    &-card-foot {
+        background-color: white;
+    }
+
+    &-card-foot {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    button.is-danger {
+        background-color: rgb(235, 0, 0);
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content {
+        text-align: center;
+        margin: 0.5in auto;
+    }
+
+    /* Call to action */
+    
+    .cta-content-box p {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .cta-content-box__link {
+        &--is-submit,
+        &--is-login {
+            display: block;
+            width: 15rem;
+            margin: auto;
+            border-color: #167503;
+            font-weight: 900;
+        }
+
+        &--is-submit {
+            background-color: white;
+            border-color: #167503;
+            color: #167503;
+            &:hover {
+                background-color: darken(#fff, 1.5%);
+                color: #167503;
+            }
+        }
+
+        &--is-login {
+            background-color: #167503;
+            color: white;
+
+            &:hover {
+                background-color: darken(#167503, 3%);
+                color: white;
+            }
+        }
+    }
+}
+
+.modal.is-active {
+    z-index: 1000;
+}

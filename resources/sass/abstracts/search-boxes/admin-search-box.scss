@@ -1,0 +1,22 @@
+.search-box {
+    overflow: auto;
+    max-width: 35rem;
+    width: 100%;
+    float: right;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+    margin: 0.5in 0 1in;
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    &__button {
+        &--submit {
+            margin-left: 0.5rem;
+        }
+    }
+}

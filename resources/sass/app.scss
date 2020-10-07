@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+@import "font-awesome";
+@import "~summernote/dist/summernote-lite.css";
+@import "~bulma/bulma.sass";
+
+@import "abstracts/variables", "abstracts/breakpoints", "abstracts/medias", "abstracts/profile-picture",
+    "abstracts/flash-messages", "abstracts/difficulty.scss", "abstracts/search-boxes/admin-search-box";
+
+@import "base/base", "base/admin-base";
+
+@import "components/navbars/navbar", "components/cards/project-card", "components/cards/comment-card",
+    "components/cards/topic-card", "components/cards/user-card", "components/modals/call-to-action",
+    "components/modals/modal", "components/notification", "components/boxes/project-article", "components/breadcrumb",
+    "components/admin-content-card", "components/admin-inputs-box", "components/admin-profile", "components/menu/menu",
+    "components/menu/admin-menu", "components/navbars/admin-navbar", "components/cards/ban-card",
+    "components/navbars/profile-navbar", "components/cards/report-card", "components/cards/category-card";
+
+@import "layouts/headers/header", "layouts/headers/header-admin", "layouts/footer", "layouts/search", "layouts/comments",
+    "layouts/topics";
+
+@import "pages/contact/contact", "pages/auth-page", "pages/projects/index", "pages/users/show", "pages/projects/create",
+    "pages/projects/show", "pages/admin/create", "pages/admin/users/index", "pages/users/create",
+    "pages/admin-reports-index", "pages/projects/admin-index", "pages/users/edit", "pages/reports/show",
+    "pages/bans/index", "pages/reports/comment/show";

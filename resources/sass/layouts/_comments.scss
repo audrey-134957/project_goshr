@@ -1,0 +1,48 @@
+.comments-section {
+    &__title {
+        font-size: 1.3rem;
+    }
+
+    &__media {
+        margin-bottom: 1rem;
+    }
+
+    &__textzone {
+        overflow: auto;
+    }
+
+    &__textarea {
+        border-radius: 10px;
+    }
+
+    &__button {
+        &--submit {
+            float: right;
+            margin-top: 1rem;
+            border-color: green;
+            color: green;
+
+            &:hover {
+                color: green;
+                border-color: green;
+                background-color: darken(#fff, 1%);
+            }
+        }
+    }
+
+    &__list {
+        overflow: auto;
+        margin-top: 1in;
+    }
+
+    &__no-comment-box {
+        background-color: rgb(250, 250, 250);
+        border-radius: 10px;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        text-align: center;
+    }
+}

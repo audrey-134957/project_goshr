@@ -1,0 +1,41 @@
+.notification {
+    width: 100%;
+    margin-right: 1.5rem !important;
+    left:0;
+
+    &__text {
+        text-align: center;
+    }
+
+    &--success.is-success,
+    &--danger.is-danger {
+        position: absolute;
+        top: 74.02px;
+        z-index:100;
+    }
+    &--success.is-success {
+        background-color: #e8ffe3 !important;
+        color: #167503 !important;
+    }
+
+    &--danger.is-danger {
+        background-color: #ffe3e3 !important;
+        color: #f50000 !important;
+    }
+
+    &--back.is-success,
+    &--back.is-danger{
+        @media screen and (max-width: 1024px - 1px) {
+            top: -1rem;
+        }
+        @media screen and (min-width: 1024px) {
+        top: 74.02px;
+        }
+
+        .notification__text{
+            @media screen and (min-width: 1024px) {
+                margin-left: 25%;
+            }
+        }
+    }
+}

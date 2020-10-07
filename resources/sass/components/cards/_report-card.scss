@@ -1,0 +1,24 @@
+.report-card {
+    max-width: 70rem;
+    margin: 1rem;
+    border-radius: 10px;
+    
+
+    &__motives-box {
+        margin-top: 1rem;
+    }
+
+    &__tag {
+        margin: 0.4rem;
+        white-space: normal;
+        height: fit-content;
+        padding: 0.2rem 1rem;
+    }
+}
+
+.reports-infos {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    column-gap: 1rem;
+    align-items: flex-start;
+}

@@ -1,0 +1,66 @@
+.user-card {
+    padding: 2rem 1rem;
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+
+    &__card-header.card-header {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    &__card-content.card-content div {
+        margin-top: 2rem;
+    }
+
+    &__image {
+        margin: auto;
+    }
+
+    &__title {
+        display: block;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__username,
+    &__complete-name,
+    &__user-email{
+        word-break: break-all;
+    }
+    
+    &__complete-name-box {
+        text-align: center;
+    }
+    &__user-complete-name {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__role-box {
+        margin-bottom: 3rem;
+    }
+
+    &__title.title {
+        font-size: 13px;
+        text-transform: uppercase;
+        margin-bottom: 0.1rem;
+    }
+
+    &__card-footer.card-footer {
+        border-top: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__button.button.is-rounded {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    }
+}

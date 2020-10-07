@@ -1,0 +1,86 @@
+.section__box--profile{
+
+    max-width: 50rem;
+    padding: 1rem;
+    border-radius: $project-card-border-radius;
+
+    //en dessous de 1024px
+    @include nav-stricly-lower-than-l{
+        margin:0 auto;
+    }
+
+    //min 1024px
+    @include nav-l{
+        margin-left:2rem;
+    }
+
+    .section__card-header{
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    .section__profile-picture{
+        min-height:80px;
+        min-width:80px;
+        border-radius: $project-create-heading-size;
+    }
+
+    .section__author-username{
+        margin-left:1rem;
+        font-weight: $font-medium;
+        font-size:$section-heading-size - 1px;
+    }
+    
+    .section__card-body{
+        border:none;
+        margin:0.5in 0;
+    }
+
+
+    .section__infos{
+
+        // min 425px
+        @include post-card-s{
+            margin:1rem 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .section__info{
+        margin-bottom: 1.5rem;
+
+        //min 600px
+        @include nav-sm{
+            display: flex;
+        }
+
+        span{
+            display: block;
+
+                //min 600px
+                @include nav-sm{
+                    margin-right: 1rem;
+                }
+
+            &:first-child{
+                font-weight:$font-medium;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                color:$label-color;
+            }
+        }
+    }
+
+    .section__info--bio{
+        margin:0.5in 0;
+    }
+
+    .section__card-footer{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1in;
+    }
+
+}

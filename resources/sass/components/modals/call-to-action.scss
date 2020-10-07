@@ -1,0 +1,48 @@
+.cta-modal.modal.is-active {
+    z-index: 1000;
+}
+
+.cta-modal {
+    &__box {
+        max-width: 40rem;
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__content{
+        text-align: center;margin:0.5in auto;
+    }
+
+    &__link{
+        &--is-submit,
+        &--is-login{
+            display:block;
+            width: 15rem;
+            margin:auto;
+            border-color: #167503;
+            font-weight: 900;
+        }
+
+        &--is-submit{
+            background-color: white;
+            border-color: #167503;
+            color: #167503;
+            &:hover {
+                background-color: darken(#fff, 1.5%);
+                color: #167503;
+            }
+        }
+
+        &--is-login{
+            background-color: #167503;
+            color: white;
+
+            &:hover {
+                background-color: darken(#167503, 3%);
+                color: white;
+            }
+        }
+    }
+}

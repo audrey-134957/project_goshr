@@ -1,0 +1,45 @@
+.project-article-box {
+    &__anchors-buttons {
+        position: fixed;
+        top: 50%;
+        right: 5%;
+        height: 13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 10;
+    }
+
+    &__anchor-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.project-article,
+.comments-section,
+.topics-section,
+.suggestion-projects-list {
+    height: fit-content;
+    margin: 0 auto 1in !important;
+}
+
+.project-article,
+.comments-section,
+.topics-section {
+    border-radius: 15px;
+    max-width: 60rem;
+}
+
+.box--focus {
+    border: 1px solid rgba(171, 255, 182, 0.527);
+    background-color: rgba(171, 255, 182, 0.082);
+}
+
+.suggestion-projects-list{
+    margin-top: 2in !important;
+}

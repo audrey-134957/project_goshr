@@ -1,0 +1,49 @@
+.auth-box {
+    max-width: 30rem;
+    width: 100%;
+    border-radius: 15px;
+    margin: auto;
+
+    &__title {
+        text-align: center;
+        font-size: 1.7rem;
+        display: block;
+    }
+
+    &__box-content {
+        margin-top: 1in;
+    }
+
+    &__field.field {
+        margin-bottom: 1.5rem;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 1rem;
+        border-color: #167503;
+        color: #167503;
+        font-weight: 700;
+
+        &:hover {
+            border-color: #167503;
+            color: white;
+            background-color: #167503;
+            font-weight: 700;
+        }
+    }
+
+    &__related-text {
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__related-link {
+        &:hover {
+            font-weight: 700;
+        }
+    }
+}

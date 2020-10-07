@@ -1,0 +1,21 @@
+.admin-header{
+
+    grid-area: header;
+    padding: 0 3%;
+    
+    &__title{
+        grid-area: header;
+        font-size:$section-heading-size + 3px;
+        text-transform: capitalize;
+        font-weight: $font-medium;
+        margin:1rem 0;
+    }
+
+    &__title-breadcrumb{
+        color:$label-color;
+        text-transform: lowercase;
+        font-weight: $font-regular;
+        font-size: $section-heading-size - 1px;
+    }
+
+}

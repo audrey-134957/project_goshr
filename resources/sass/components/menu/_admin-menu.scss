@@ -1,0 +1,101 @@
+.admin-menu {
+    grid-area: menu;
+
+    background-color: #2b2b2c;
+    padding: 1rem 1.5rem;
+    z-index: 120;
+    height: 100%;
+
+    @media screen and (max-width: 1024px - 1px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 250px;
+    }
+
+    @media screen and (min-width: 1224px) {
+        width: 250px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 0.5in;
+    }
+
+    &__admin-infos {
+        color: white;
+        margin-left: 1rem;
+    }
+
+    &__admin-username {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    &__content {
+        margin-top: 1in;
+
+        @media screen and (max-width: 1024px - 1px) {
+            height: 60vh;
+            overflow-y: scroll;
+        }
+    }
+
+    &__icon,
+    &__link {
+        color: #b3b3b3;
+
+        &:hover {
+            color: #b3b3b3;
+        }
+
+        &--active {
+            color: #dfdfdf;
+        }
+    }
+
+    &__link {
+        font-size: 15.5px;
+    }
+
+    &__icon {
+        margin-right: 0.5rem;
+
+        &--close {
+            float: right;
+            font-size: $project-create-heading-size;
+
+            //min 1024px
+            @media screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+    }
+
+    &__list-items {
+        clear: right;
+        margin-top: 0.8rem;
+        @media screen and (min-width: 1024px) {
+            margin-top: 1rem;
+        }
+    }
+
+    &__sublist-items {
+        margin-left: 1rem;
+    }
+
+    &__link {
+        white-space: nowrap;
+    }
+
+    hr {
+        height: 1px;
+        background-color: #383838;
+    }
+}

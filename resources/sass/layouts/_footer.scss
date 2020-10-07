@@ -1,0 +1,69 @@
+/* Footer */
+
+.footer {
+    // background-color: $menu-color;
+    background-color: rgb(12, 26, 12);
+    width: 100%;
+    padding: 5rem 12%;
+    color: rgb(245, 245, 245);
+
+    /* Footer  navigation*/
+    @media screen and (min-width: 768px) {
+        padding: 5rem 8%;
+    }
+
+    &__title {
+        display: block;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &__navigation {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 40% auto auto;
+        }
+    }
+
+    /* lists items */
+
+    &__list-items {
+        @media screen and (min-width: 768px) {
+            justify-self: center;
+        }
+        width: 8rem;
+        line-height: 2.5rem;
+    }
+
+    /* item */
+
+    &__item {
+        // width: fit-content;
+
+        &--is-faq,
+        &--is-cgu {
+            text-transform: $upc;
+        }
+    }
+
+    /* links */
+
+    &__mail-address,
+    &__link {
+        color: rgb(245, 245, 245);
+    }
+
+    &__mail-address {
+        border: solid 1px rgb(245, 245, 245);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: rgb(245, 245, 245);
+        }
+    }
+}

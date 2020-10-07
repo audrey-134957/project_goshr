@@ -1,0 +1,19 @@
+.reported-content {
+    margin: 1in 0 !important;
+    max-width: 70rem;
+    border: solid 1px whitesmoke;
+    background-color: white;
+}
+
+.decision-report-form {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 70rem;
+
+
+    &__button{
+        &--disapprove{
+            margin-left:1rem; 
+        }
+    }
+}

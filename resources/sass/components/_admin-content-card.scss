@@ -1,0 +1,105 @@
+.main--admin{
+    .section__card--project,
+    .section__card--post{
+        border-radius: $time-notification + 1px;
+        padding: 1rem;
+        height:fit-content;
+        margin-bottom:1rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover{
+            background-color:$white-two;
+        }
+
+        //en dessous de 768px
+        @include nav-stricly-lower-than-m{
+            max-width:30rem;
+            width:100%;
+        }
+
+        //min 768px
+        @include nav-m{
+            max-width:75rem;
+            width:100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    
+
+        .section__card-header,
+        .section__card-content,
+        .section__card-footer{
+
+            // min 768px
+            @include nav-m{
+                padding:0;
+            }
+        }
+        .section__button,
+        .section__link--delete{
+            &:hover{
+                border-color:$see-button;
+                color:$see-button;
+            }
+        }
+
+        .section__card-header{
+            box-shadow: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            // min 768px
+            @include nav-m{
+                border-right:solid 1px $inactive-leaf-color;
+                padding-right:1rem;
+            }
+        }
+
+        .section__profile-picture{
+            width:40px;
+            height:40px;
+            border-radius: 15px !important;
+        }
+
+        .section__author-username{
+            margin-left: 0.5rem;
+        }
+
+        .section__card-content{
+            width:100%;
+            height:100%;
+            padding-left:1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .section__heading{
+            font-weight: $font-medium;
+        }
+
+        .section__publish-date{
+            color:$label-color;
+        }
+
+        .section__link{
+            &--delete{
+                margin-left:0.5rem;
+            }
+
+            &--project{
+                width:60%;
+                height:100%;
+            }
+        }
+
+        .section__card-footer{
+            border-top:none;
+            align-self: center;
+        }
+
+    }
+}

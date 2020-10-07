@@ -1,0 +1,50 @@
+.contact-box,
+.contact-box__textarea,
+.contact-box__notification {
+    border-radius: 15px;
+}
+
+.contact-box {
+    max-width: 40rem;
+    margin: auto;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-top: 3rem;
+        font-size: 18px;
+    }
+
+    &__form {
+        margin-top: 0.7in;
+    }
+
+    &__field.field {
+        margin-bottom: 2rem;
+    }
+
+    &__select,
+    &__select select,
+    &__button {
+        width: 100%;
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 1rem;
+        border-color: #167503;
+        color: #167503;
+        font-weight: 700;
+
+        &:hover {
+            border-color: #167503;
+            color: white;
+            background-color: #167503;
+            font-weight: 700;
+        }
+
+        
+    }
+}

@@ -1,0 +1,28 @@
+.section {
+    clear: right;
+    padding: 0;
+}
+
+.users-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 20rem));
+    grid-gap: 1.5rem;
+    justify-content: center;
+  
+
+    &__users-number {
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 706px) {
+            grid-column-end: span 2;
+        }
+
+        @media screen and (min-width: 1323px) {
+            grid-column-end: span 3;
+        }
+
+        @media screen and (min-width: 1800px) {
+            grid-column-end: span 4;
+        }
+    }
+}

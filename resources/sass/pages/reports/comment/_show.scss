@@ -1,0 +1,16 @@
+.report-header {
+    margin-top: 1rem;
+
+    &__tag {
+        margin: 0.4rem;
+        white-space: normal;
+        height: fit-content;
+        padding: 0.2rem 1rem;
+    }
+}
+
+.report-decision-form {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 60rem;
+}

@@ -1,0 +1,186 @@
+.project-form {
+    max-width: 60rem;
+    margin: auto;
+    padding: 15px;
+
+    .label {
+        margin-bottom: 1rem;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    &__categories-list,
+    &__difficulty-levels-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto !important;
+        padding: 1rem 0;
+
+        @media screen and (min-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
+        .label {
+            flex: 0 0 auto;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            @media screen and (min-width: 1024px) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .label-name {
+            border: solid 1px $label-color;
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+        }
+
+        input[type="radio"]:checked ~ span {
+            border: solid 2px green;
+            color: green;
+        }
+    }
+
+    .thumbnail-field-box {
+        &__label {
+            height: 200px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top 30% center;
+            background-color: rgb(252, 252, 252);
+
+            &::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                content: "\f055";
+                font-family: FontAwesome;
+                font-size: 2em;
+                color: gray;
+            }
+
+            &--has-an-image {
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    background: $bk-color-thumbnail;
+                    content: " ";
+                    transition: ease-in-out 750ms;
+                }
+
+                &::after {
+                    content: "\f055";
+                    color: $menu-color;
+                }
+            }
+        }
+    }
+
+    .materials-fields-box {
+        &__material-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        &__dot {
+            margin-right: 0.5rem;
+        }
+
+        &__icon {
+            margin-right: 1rem;
+        }
+
+        &__button {
+            margin-left: 1rem;
+        }
+    }
+
+    .time-fields-box,
+    .budget-fields-box {
+        &__d-flex {
+            display: flex;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        input[type="text"] {
+            width: 5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__summernote-box {
+        margin-top: 1rem;
+    }
+
+    .note-editable {
+        width: 100%;
+    }
+
+    ul,
+    ol {
+        margin-left: 1rem;
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    .note-btn {
+        background-color: $note-btn;
+        border: $note-btn;
+        border-radius: 5px !important;
+        margin: 0 0.2rem;
+        &:hover {
+            background-color: $inactive-leaf-color;
+        }
+    }
+
+    &__sub-footer {
+        position: sticky;
+        bottom: 0;
+        z-index: 5;
+        background-color: $menu-color;
+        padding: 1rem 0;
+        margin-top: 0.5in;
+        margin-bottom: 1rem;
+    }
+
+    &__button {
+        width: 100%;
+
+        &--submit {
+            border: solid 1px green;
+            color: green;
+            margin-top: 1rem;
+            
+            &:hover {
+                background-color: green;
+                color: white;
+            }
+        }
+    }
+}

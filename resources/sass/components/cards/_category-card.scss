@@ -1,0 +1,63 @@
+.category-creation-box {
+    padding: 16px;
+    margin: 0.5rem;
+    max-width: 60rem;
+
+    &__label.label {
+        font-weight: 500 !important;
+        font-size: 18px;
+    }
+
+    &__input-box.field {
+        max-width: 60% !important;
+        width: 100%;
+    }
+
+    &__category-field {
+        max-width: 60rem;
+        width: 100%;
+    }
+
+    &__submit-button {
+        margin-left: 0.5rem;
+    }
+}
+
+.category-card {
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 40rem;
+    margin: 1rem 0.5rem;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__delete-button,
+    &__sd-edit-button{
+        margin-left: 0.5rem;
+    }
+
+    &__edit-button,
+    &__delete-button {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__input-box.field {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    &__edit-form {
+        display: flex;
+        margin-top: 1rem;
+    }
+
+    &__edit-button {
+        margin-left: 0.5rem;
+    }
+}

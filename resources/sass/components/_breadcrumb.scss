@@ -1,0 +1,31 @@
+.breadcrumb{
+    margin:1rem;
+    padding: 1rem;
+
+
+    .breadcrumb__list-items{
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .breadcrumb__item + .breadcrumb__item::before {
+        color: $inactive-leaf-color;
+        content: "	\0025CF" !important;
+    }
+
+    .breadcrumb__item:last-child::before {
+    color: $nav-link-color !important;
+}
+
+    .breadcrumb__link{
+
+        color:$inactive-leaf-color !important;
+        font-weight:$font-medium !important;
+
+        &--active{
+            color:$nav-link-color !important;
+        }
+    }
+
+
+}

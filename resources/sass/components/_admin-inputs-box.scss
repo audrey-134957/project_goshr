@@ -1,0 +1,86 @@
+.main--admin{
+
+    .section__box--head--inputs-group{
+        // min 900px
+        @include admin-head-form-box-l{
+           display: flex;
+           flex-direction: row-reverse;
+           justify-content: space-between;
+           align-items: center;
+        }
+    }
+
+
+    .section__box--head--only-search{
+        //min 600px
+        @include nav-sm{
+            display: flex;
+           flex-direction: row-reverse;
+           justify-content: space-between;
+           align-items: center;
+        }
+    }
+
+    .section__inputs,
+    .section__select,
+    .section__dates-inputs{
+        display: flex;
+    }
+
+    .section__inputs{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        align-items: center;
+        height: fit-content;
+    
+        div{
+          flex: 0 0 auto;
+        }
+    }
+
+    .section__form{
+        max-width:fit-content;
+
+        &--inputs-group{
+            margin-bottom:2rem;
+
+            //entre 746px et 899px
+            @include admin-head-form-box-between-m-l{
+                margin: 0 0 2rem auto;
+            }
+
+            //min 900px
+            @include admin-head-form-box-l{
+            margin-bottom:0;
+            }
+        }
+
+        &--only-search{
+
+            //min 600
+            @include nav-stricly-lower-than-sm{
+                margin-right:0 !important;
+                margin-left: auto;
+                margin-bottom: 0 !important;
+            }
+        }
+
+    }
+
+    .section__dates-inputs{
+        height:fit-content;
+        margin: 0 1rem;
+    }
+
+    .section__date-input-box{
+        width:8.5rem;
+
+        &:last-child{
+            margin-left: 1rem;
+        }
+    }
+
+    .section__search-box{
+        max-width:25rem;
+    }
+}

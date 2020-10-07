@@ -1,0 +1,17 @@
+.profile-navbar {
+    max-width: 90%;
+    margin: 1in auto;
+
+    &__item {
+        display: inline;
+        margin-right: 1rem;
+        // font-size: 16px;
+        padding-bottom: $time-notification - 2px;
+
+        &--is-active {
+            border-bottom: solid 3px $label-color;
+            font-weight: 700;
+
+        }
+    }
+}

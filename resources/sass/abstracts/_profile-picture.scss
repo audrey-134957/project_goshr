@@ -1,0 +1,16 @@
+
+//general
+.profile-picture{
+    border-radius:$time-notification - 4px;
+    object-fit: cover;
+    height: 45px;
+    width: 45px;
+    border:solid 2px white;
+}
+
+
+//member profile
+.profile__profile-picture{
+    width: 130px !important;
+    border-radius: $project-card-border-radius;
+}

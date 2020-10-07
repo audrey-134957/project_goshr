@@ -1,0 +1,64 @@
+$small: 425px;
+
+$screen-700: 700px;
+
+$medium-1: 768px - 1px;
+
+$medium: 768px;
+
+$high-1px: 1024 - 1px;
+
+$high: 1024px;
+
+$semi-large: 1200px;
+
+$large-1: 1224px - 1px;
+
+$large: 1224px;
+
+$xl-1: 1400px - 1px;
+
+$xl: 1400px;
+
+$huge: 1440px;
+
+
+
+// names breakpoints:
+
+//navigation
+$nav-sm: 600px;
+$nav-below-sm: $nav-sm - 1px;
+$nav-m:768px;
+$nav-below-m:$nav-m - 1px;
+$nav-l:1024px;
+$nav-below-l: $nav-l - 1px;
+$nav-h:1200px; // h = huge
+
+//posts
+$post-card-s:425px;
+$posts-section-xl: 1440px;
+$posts-section-below-xl: $posts-section-xl - 1px;
+
+//authentification
+$box-auth-below-sm : $nav-sm - 101px;
+
+//top-button
+$to-top-button-m:700px;
+$to-top-button-below-m:$to-top-button-m - 1px;
+
+//comments
+$comments-l: 1224px;
+$comments-below-m: $comments-l - 1px;
+
+//fields-profile-edit
+
+$fields-placement-m: 800px;
+$fields-placement-below-m: $fields-placement-m - 1px;
+
+//(admin)
+
+$content-number-sm : $box-auth-below-sm + 1px;
+$admin-head-form-box-m : 746px;
+$admin-head-form-box-l : 900px; 
+$admin-head-form-box-below-l: $admin-head-form-box-l - 1px;

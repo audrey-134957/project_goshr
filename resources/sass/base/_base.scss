@@ -1,0 +1,97 @@
+html,
+body,
+a {
+    color: $default-text-color;
+}
+
+html,
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: $default-background-color;
+    background-color: rgb(253, 253, 253);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.main {
+    flex: 1;
+    width: 100%;
+    min-height: 100%;
+    margin: 5% 0;
+    padding: 1rem;
+}
+
+
+textarea {
+    resize: none !important;
+    border-bottom-style: solid 1px;
+}
+
+label {
+    font-weight: $font-regular !important;
+    color: $label-color !important;
+}
+
+input[type="radio"],
+.note-image-input {
+    display: none;
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+    border-color: $label-color !important;
+}
+
+.note-form-label {
+    width: 100%;
+    cursor: pointer;
+    background-color: $note-btn;
+    border-radius: $section-heading-size;
+    height: 150px;
+    position: relative;
+    color: $note-btn !important;
+
+    &:after {
+        cursor: pointer;
+        border-radius: $section-heading-size;
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        content: "charger une image";
+        color: $label-color;
+    }
+}
+
+.note-modal-header,
+.note-modal-content {
+    border-radius: $project-card-border-radius;
+}
+
+.note-modal-header {
+    border: none !important;
+}
+
+.note-modal-content {
+    min-height: 380px;
+}
+
+.note-btn-primary {
+    background-color: $nav-link-color;
+    border-color: $nav-link-color;
+    -webkit-opacity: 1 !important;
+    opacity: 1 !important;
+    border-radius: $tag-border-radius;
+    font-size: $notification-text;
+    font-weight: $font-bold;
+    margin-right: 1.5rem;
+}

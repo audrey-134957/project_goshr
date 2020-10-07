@@ -1,0 +1,269 @@
+//min 425px
+@mixin post-card-s{
+    @media (min-width: #{$post-card-s}) {
+       @content;
+    }
+}
+
+// strictement en dessous de 500px
+@mixin box-auth-stricly-lower-than-sm{
+   @media (max-width: #{$box-auth-below-sm }) {
+      @content;
+   }
+}
+
+//min 500px
+@mixin content-number-sm{
+    @media (min-width: #{$content-number-sm}) {
+       @content;
+    }
+}
+
+// strictement en dessous de 600px
+@mixin nav-stricly-lower-than-sm{
+   @media (max-width: #{$nav-below-sm}) {
+      @content;
+   }
+}
+
+
+// min 600px
+@mixin nav-sm{
+   @media (min-width: #{$nav-sm}) {
+      @content;
+   }
+}
+
+//en dessous de 700px
+@mixin top-top-btn-stricly-lower-than-m{
+   @media (max-width: #{$to-top-button-below-m}) {
+      @content;
+   }
+}
+
+// min 768px
+@mixin nav-m{
+   @media (min-width: #{$nav-m}) {
+      @content;
+   }
+}
+
+
+// strictement en dessous de 768px
+@mixin nav-stricly-lower-than-m{
+   @media (max-width: #{$nav-below-m}) {
+      @content;
+   }
+}
+
+// min 746px
+@mixin admin-head-form-box-m{
+   @media (min-width: #{$admin-head-form-box-m}) {
+      @content;
+   }
+}
+
+//entre 768px et 1024px
+@mixin nav-between-m-and-l{
+   @media (min-width: #{$nav-m}) and (max-width: #{$nav-l}) {
+      @content;
+   }
+}
+
+// strictement en dessous de 800px
+@mixin fields-placement-stricly-lower-than-m{
+   @media (max-width: #{$fields-placement-below-m}) {
+      @content;
+   }
+}
+
+// min 800px
+@mixin fields-placement-m{
+   @media (min-width: #{$fields-placement-m}) {
+      @content;
+   }
+}
+
+// entre 746px et 899px
+@mixin admin-head-form-box-between-m-l{
+    @media (min-width: #{$admin-head-form-box-m}) and (max-width: #{$admin-head-form-box-below-l}) {
+      @content;
+   }
+}
+
+//min 900px
+@mixin admin-head-form-box-l{
+   @media (min-width: #{$admin-head-form-box-l}) {
+      @content;
+   }
+}
+
+// strictemtnt inférieur à  1024px
+@mixin nav-stricly-lower-than-l{
+   @media (max-width: #{$nav-below-l}) {
+      @content;
+   }
+}
+
+// min 1024px
+@mixin nav-l{
+   @media (min-width: #{$nav-l}) {
+      @content;
+   }
+}
+
+//min 1200px
+@mixin nav-h{
+   @media (min-width: #{$nav-h}) {
+      @content;
+   }
+}
+
+//strictement en dessous de 1224px
+@mixin comments-strictly-lower-than-l{
+   @media (max-width: #{$comments-l}) {
+      @content;
+   }
+}
+
+//min 1224px
+@mixin comments-l{
+   @media (min-width: #{$comments-l}) {
+      @content;
+   }
+}
+
+
+// min 1440px
+@mixin section-xl{
+   @media (min-width: #{$posts-section-xl}) {
+      @content;
+   }
+}
+
+//strictement en dessous de 1440px
+@mixin section-stricly-lower-than-xl{
+   @media (min-width: #{$posts-section-below-xl}) {
+      @content;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin s-max{
+    @media (max-width: #{$small}) {
+       @content;
+    }
+}
+
+@mixin s{
+    @media (min-width: #{$small}) {
+       @content;
+    }
+}
+
+@mixin max-700{
+    @media (max-width: #{$screen-700}) {
+       @content;
+   }
+}
+
+@mixin min-700{
+    @media (min-width: #{$screen-700}) {
+       @content;
+   }
+}
+
+@mixin m-max-1{
+    @media (max-width: #{$medium-1}) {
+       @content;
+    }
+}
+
+@mixin m-max{
+    @media (max-width: #{$medium}) {
+       @content;
+    }
+}
+
+@mixin m{
+    @media (min-width: #{$medium}) {
+      @content;
+    }
+}
+
+@mixin high-1px{
+    @media (max-width: #{$high-1px}) {
+      @content;
+    }
+}
+
+@mixin high{
+    @media (min-width: #{$high}) {
+      @content;
+    }
+}
+
+@mixin semi-large{
+   @media (min-width: #{$semi-large}) {
+      @content;
+   }
+}
+
+@mixin xl-1{
+    @media (max-width: #{$xl-1}) {
+      @content;
+    }
+}
+
+@mixin xl{
+   @media (min-width: #{$xl}) {
+      @content;
+   }
+}
+
+@mixin large-1{
+   @media (max-width: #{$large-1}) {
+      @content;
+   }
+}
+
+@mixin large{
+   @media (min-width: #{$large}) {
+      @content;
+   }
+}
+
+@mixin huge-max{
+    @media (max-width: #{$huge}) {
+       @content;
+    }
+}
+
+@mixin huge{
+    @media (min-width: #{$huge}) {
+       @content;
+   }
+}
+
+@mixin rwd($screen) {
+   @media (min-width: $screen+'px' ) {
+      @content;
+   }
+}
