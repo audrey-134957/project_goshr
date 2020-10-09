@@ -16094,6 +16094,7 @@ input[type=radio],
 
 .navbar__logo {
   width: 35px !important;
+  margin: auto !important;
 }
 
 .navbar__avatar {
@@ -17471,6 +17472,11 @@ input[type=radio],
   background-color: #fff;
   border-bottom: solid 1px #d3d3d3;
   white-space: nowrap;
+}
+
+.admin-navbar img.admin-navbar__logo {
+  width: 35px !important;
+  margin: auto !important;
 }
 
 .admin-navbar__image-figure.image.is-70xauto {

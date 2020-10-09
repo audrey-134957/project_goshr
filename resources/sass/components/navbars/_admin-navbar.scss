@@ -10,7 +10,11 @@
     border-bottom:solid 1px $inactive-leaf-color;
     white-space: nowrap;
 
+    img.admin-navbar__logo {
+        width: 35px !important;
+        margin: auto !important;
 
+    }
 
     &__image-figure.image.is-70xauto{
         width: 70px;
