@@ -21962,10 +21962,17 @@ __webpack_require__(/*! ../js/elements/category-form */ "./resources/js/elements
   toggle: function toggle() {
     var adminVerticalNavbarBtn = $('.admin-navbar__button--menu');
     var adminVerticalNavbar = $('.admin-menu');
+
+    if ($(window).width() > 1024) {
+      adminVerticalNavbar.removeClass('is-hidden');
+    } else {
+      adminVerticalNavbar.addClass('is-hidden');
+    }
+
     $(window).on('resize', function () {
       if ($(window).width() < 1024) {
         adminVerticalNavbar.addClass('is-hidden');
-      } else if ($(window).width() >= 1024) {
+      } else {
         adminVerticalNavbar.removeClass('is-hidden');
       }
     });

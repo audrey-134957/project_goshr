@@ -17383,11 +17383,6 @@ input[type=radio],
   margin-bottom: 0.5in;
 }
 
-.admin-menu .admin-menu__avatar.image {
-  width: 64px !important;
-  max-width: 100%;
-}
-
 .admin-menu__admin-infos {
   color: white;
   margin-left: 1rem;
