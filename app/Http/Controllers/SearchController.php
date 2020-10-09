@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Project;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -48,9 +49,41 @@ class SearchController extends Controller
             $resultsText = 'résultats';
         }
 
+        //si une catégorie est sélectionnée
+        if (request()->category) {
+            //je retrouve les projets avec leur catégorie
+            $projects =  Project::with('category')
+                ->where('status_id', 2)
+                ->where('fictionnal_deletion', 0)
+                ->whereHas('category', function ($query) {
+                    //si le slug correpond à celui selectionné
+                    $query->where('slug', request()->category);
+                    //je les récupère
+                })->orderBy('created_at', 'DESC')
+                ->get();
+            // je récupère les catégories
+            $categories = Category::all();
+            //je récupère le nom de la catégorie qui correspond à celle sélectionnée.
+            $categoryName = $categories->where('slug', request()->category)->first()->name;
+            //si aucune catégorie n'est sélectionnée
+        } else {
+            //je récupère toutes les catégories
+            $categories = Category::get();
+            //le nom de catégorie sera null
+            $categoryName = '';
+            //je récupères tous les projets.
+            $projects = Project::with('category', 'user', 'materials', 'difficulty_level', 'unity_of_measurement', 'status')
+                ->where('status_id', 2)
+                ->where('fictionnal_deletion', 0)
+                ->orderBy('created_at', 'DESC')
+                ->get();
+        }
+
         return view('searchs.projects.projects-search', [
             'projects' => $projects,
-            'resultsText' => $resultsText
+            'resultsText' => $resultsText,
+            'categories'    => $categories,
+            'categoryName'  => $categoryName
         ]);
     }
 

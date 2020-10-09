@@ -8,11 +8,19 @@
 
 
 <div class="projects-list">
+
+    <div class="categories-list">
+        <ul>
+            @foreach($categories as $category)
+            <li><a href="{{route('projects.index', ['category' => $category->slug])}}" class="categories-list__link button {{request()->category == $category->slug ? 'categories-list__link--is-active' : '' }} is-rounded">{{$category->name}}</a></li>
+            @endforeach
+        </ul>
+    </div>
+
     @if(request()->input())
-
     <h1 class="projects-list__title title"> {{$projects->count().' '.$resultsText}} pour la recherche "{{request()->q}}"</h1>
-
     @endif
+
 
     @forelse($projects as $project)
     <div class="project-card card">
