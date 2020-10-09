@@ -1,5 +1,5 @@
 <div class="admin-navbar">
-    <button class="admin-navbar__button admin-navbar__button--menu button is-success is-outlined is-rounded" style="z-index:10"><i class="admin-navbar__icon fa fa-bars" aria-hidden="true"></i></button>
+    <button class="admin-navbar__button admin-navbar__button--menu button is-success is-outlined is-rounded"><i class="admin-navbar__icon fa fa-bars" aria-hidden="true"></i></button>
 
     <figure class="admin-navbar__image-figure image is-70xauto">
         <img class="admin-navbar__logo" src="{{asset('./images/logo/logo.png')}}" alt="logo du site web">

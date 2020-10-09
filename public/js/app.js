@@ -21961,7 +21961,7 @@ __webpack_require__(/*! ../js/elements/category-form */ "./resources/js/elements
 /* WEBPACK VAR INJECTION */(function($) {var adminNavbar = {
   toggle: function toggle() {
     var adminVerticalNavbarBtn = $('.admin-navbar__button--menu');
-    var adminVerticalNavbar = $('.admin-navbar');
+    var adminVerticalNavbar = $('.admin-menu');
     $(window).on('resize', function () {
       if ($(window).width() < 1024) {
         adminVerticalNavbar.addClass('is-hidden');

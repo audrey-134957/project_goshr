@@ -17352,6 +17352,7 @@ input[type=radio],
   padding: 1rem 1.5rem;
   z-index: 120;
   height: 100%;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1023px) {
@@ -17378,8 +17379,13 @@ input[type=radio],
 .admin-menu__header {
   display: flex;
   align-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 0.5in;
+}
+
+.admin-menu .admin-menu__avatar.image {
+  width: 64px !important;
+  max-width: 100%;
 }
 
 .admin-menu__admin-infos {
@@ -17469,10 +17475,15 @@ input[type=radio],
   width: 100%;
   background-color: #fff;
   border-bottom: solid 1px #d3d3d3;
+  white-space: nowrap;
 }
 
 .admin-navbar__image-figure.image.is-70xauto {
   width: 70px;
+}
+
+.admin-navbar__button--menu {
+  z-index: 2000;
 }
 
 @media screen and (min-width: 1024px) {

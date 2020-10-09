@@ -1,6 +1,6 @@
-<nav class="admin-menu">
+<nav class="admin-menu is-hidden">
     <div class="admin-menu__header">
-        <figure class="image is-64x64">
+        <figure class="admin-menu__avatar image is-64x64">
             <img class="is-rounded" src="{{auth()->user()->getImage(auth()->user())}}">
         </figure>
         <span class="admin-menu__admin-infos"><span class="admin-menu__admin-username">{{auth()->user()->firstname.' '.auth()->user()->name }}</span> <br> {{auth()->user()->role->name}}</span>
