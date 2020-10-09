@@ -57,6 +57,7 @@
                 @enderror
             </div>
 
+            <small class="auth-box__certification"><i class="auth-box__certification-icon fa fa-check-circle-o" aria-hidden="true"></i> je certifie avoir plus de 16 ans lors de mon inscription sur le site.</small>
             <button class="auth-box__button auth-box__button--is-submit button is-rounded" type="submit">inscription</button>
         </form>
         <hr>

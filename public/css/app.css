@@ -17940,6 +17940,14 @@ input[type=radio],
   font-weight: 700;
 }
 
+.auth-box__certification {
+  font-style: italic;
+}
+
+.auth-box__certification-icon {
+  color: #00cf03;
+}
+
 .categories-list {
   max-width: 90vw;
   margin-bottom: 5%;
