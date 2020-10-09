@@ -17,6 +17,7 @@ class HomeController extends Controller
         //je récuềre les projets
         $projects = Project::with('category', 'user', 'materials', 'difficulty_level', 'unity_of_measurement','status')
                             ->where('status_id', 2)
+                            ->where('fictionnal_deletion', 0)
                             ->orderBy('created_at', 'desc')
                             ->get();
 

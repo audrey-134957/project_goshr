@@ -1,7 +1,11 @@
 <nav class="navbar">
-    <a href="@auth {{route('projects.index')}} @else {{route('home.index')}} @endauth"><img class="navbar__logo" src="{{asset('./images/logo/logo.png')}}" alt=""></a>
+    <a href="@auth {{route('projects.index')}} @else {{route('home.index')}} @endauth"><img class="navbar__logo" style="width:30px;" src="{{asset('./images/logo/logo-r.png')}}" alt=""></a>
 
-    <a href="{{ route('projects.index') }}" class="navbar__link {{ request()->route()->named('projects.*') ? 'navbar__link--is-active' : '' }}">Projets</a>
+
+    <a href="{{ route('projects.index') }}" class="navbar__link navbar__link--project {{ request()->route()->named('projects.*') ? 'navbar__link--is-active' : '' }}">
+    <i class="navbar__icon navbar__icon--project fa fa-th-large" aria-hidden="true"></i>
+    <span class="navbar__link-name">Projets</span>
+    </a>
 
     <form class="search-form" action="{{route('projectsSearch.result')}}" method="GET">
         <div class="control has-icons-left has-icons-right">
@@ -18,7 +22,7 @@
     </figure>
     @else
     <div class="navbar__auth-links">
-        <a href="{{ route('login.create') }}"><i class="navbar__icon fa fa-user-o" aria-hidden="true"></i></a>
+        <a href="{{ route('login.create') }}"><i class="navbar__icon navbar__icon--auth fa fa-user-o" aria-hidden="true"></i></a>
         <a href="{{ route('login.create') }}" class="navbar__link--is-login button is-rounded">connexion</a>
         <a href="{{ route('register.create') }}" class="navbar__link--is-signup button is-rounded">inscription</a>
     </div>

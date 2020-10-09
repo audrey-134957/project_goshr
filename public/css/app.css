@@ -3056,7 +3056,9 @@
   clip: auto;
 }
 
-/*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
+/*! bulma.io v0.9.1 | MIT License | github.com/jgthms/bulma */
+
+/* Bulma Utilities */
 
 @-webkit-keyframes spinAround {
   from {
@@ -3380,6 +3382,8 @@ fieldset[disabled] .button {
   cursor: not-allowed;
 }
 
+/* Bulma Base */
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 
 html,
@@ -3492,6 +3496,7 @@ section {
 body,
 button,
 input,
+optgroup,
 select,
 textarea {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -3527,7 +3532,7 @@ a:hover {
 
 code {
   background-color: whitesmoke;
-  color: #f14668;
+  color: #da1039;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em;
@@ -3600,6 +3605,8 @@ table th:not([align]) {
 table th {
   color: #363636;
 }
+
+/* Bulma Elements */
 
 .box {
   background-color: white;
@@ -5215,7 +5222,7 @@ fieldset[disabled] .button {
 }
 
 .container.is-fluid {
-  max-width: none;
+  max-width: none !important;
   padding-left: 32px;
   padding-right: 32px;
   width: 100%;
@@ -5228,25 +5235,25 @@ fieldset[disabled] .button {
 }
 
 @media screen and (max-width: 1215px) {
-  .container.is-widescreen {
+  .container.is-widescreen:not(.is-max-desktop) {
     max-width: 1152px;
   }
 }
 
 @media screen and (max-width: 1407px) {
-  .container.is-fullhd {
+  .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
     max-width: 1344px;
   }
 }
 
 @media screen and (min-width: 1216px) {
-  .container {
+  .container:not(.is-max-desktop) {
     max-width: 1152px;
   }
 }
 
 @media screen and (min-width: 1408px) {
-  .container {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
     max-width: 1344px;
   }
 }
@@ -5961,6 +5968,10 @@ fieldset[disabled] .button {
   background-color: transparent;
 }
 
+.progress:indeterminate::-ms-fill {
+  animation-name: none;
+}
+
 .progress.is-small {
   height: 0.75rem;
 }
@@ -6589,6 +6600,8 @@ a.tag:hover {
   vertical-align: top;
 }
 
+/* Bulma Form */
+
 .select select,
 .textarea,
 .input {
@@ -6956,7 +6969,9 @@ fieldset[disabled] .input:-ms-input-placeholder {
 [disabled].radio,
 [disabled].checkbox,
 fieldset[disabled] .radio,
-fieldset[disabled] .checkbox {
+fieldset[disabled] .checkbox,
+.radio input[disabled],
+.checkbox input[disabled] {
   color: #7a7a7a;
   cursor: not-allowed;
 }
@@ -8089,6 +8104,8 @@ fieldset[disabled] .select select:hover {
   font-size: 1.5rem;
 }
 
+/* Bulma Components */
+
 .breadcrumb {
   font-size: 1rem;
   white-space: nowrap;
@@ -8182,9 +8199,11 @@ fieldset[disabled] .select select:hover {
 
 .card {
   background-color: white;
+  border-radius: 0.25rem;
   box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   color: #4a4a4a;
   max-width: 100%;
+  overflow: hidden;
   position: relative;
 }
 
@@ -8801,7 +8820,7 @@ button.dropdown-item.is-active {
   width: 100%;
 }
 
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 769px) {
   .modal-content,
   .modal-card {
     margin: 0 auto;
@@ -10686,6 +10705,8 @@ label.panel-block:hover {
 .tabs.is-large {
   font-size: 1.5rem;
 }
+
+/* Bulma Grid */
 
 .column {
   display: block;
@@ -12903,6 +12924,8 @@ label.panel-block:hover {
   }
 }
 
+/* Bulma Helpers */
+
 .has-text-white {
   color: white !important;
 }
@@ -13261,6 +13284,222 @@ a.has-text-danger-dark:focus {
   background-color: #fafafa !important;
 }
 
+.is-flex-direction-row {
+  flex-direction: row !important;
+}
+
+.is-flex-direction-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.is-flex-direction-column {
+  flex-direction: column !important;
+}
+
+.is-flex-direction-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.is-flex-wrap-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.is-flex-wrap-wrap {
+  flex-wrap: wrap !important;
+}
+
+.is-flex-wrap-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+.is-justify-content-flex-start {
+  justify-content: flex-start !important;
+}
+
+.is-justify-content-flex-end {
+  justify-content: flex-end !important;
+}
+
+.is-justify-content-center {
+  justify-content: center !important;
+}
+
+.is-justify-content-space-between {
+  justify-content: space-between !important;
+}
+
+.is-justify-content-space-around {
+  justify-content: space-around !important;
+}
+
+.is-justify-content-space-evenly {
+  justify-content: space-evenly !important;
+}
+
+.is-justify-content-start {
+  justify-content: start !important;
+}
+
+.is-justify-content-end {
+  justify-content: end !important;
+}
+
+.is-justify-content-left {
+  justify-content: left !important;
+}
+
+.is-justify-content-right {
+  justify-content: right !important;
+}
+
+.is-align-content-flex-start {
+  align-content: flex-start !important;
+}
+
+.is-align-content-flex-end {
+  align-content: flex-end !important;
+}
+
+.is-align-content-center {
+  align-content: center !important;
+}
+
+.is-align-content-space-between {
+  align-content: space-between !important;
+}
+
+.is-align-content-space-around {
+  align-content: space-around !important;
+}
+
+.is-align-content-space-evenly {
+  align-content: space-evenly !important;
+}
+
+.is-align-content-stretch {
+  align-content: stretch !important;
+}
+
+.is-align-content-start {
+  align-content: start !important;
+}
+
+.is-align-content-end {
+  align-content: end !important;
+}
+
+.is-align-content-baseline {
+  align-content: baseline !important;
+}
+
+.is-align-items-stretch {
+  align-items: stretch !important;
+}
+
+.is-align-items-flex-start {
+  align-items: flex-start !important;
+}
+
+.is-align-items-flex-end {
+  align-items: flex-end !important;
+}
+
+.is-align-items-center {
+  align-items: center !important;
+}
+
+.is-align-items-baseline {
+  align-items: baseline !important;
+}
+
+.is-align-items-start {
+  align-items: start !important;
+}
+
+.is-align-items-end {
+  align-items: end !important;
+}
+
+.is-align-items-self-start {
+  align-items: self-start !important;
+}
+
+.is-align-items-self-end {
+  align-items: self-end !important;
+}
+
+.is-align-self-auto {
+  align-self: auto !important;
+}
+
+.is-align-self-flex-start {
+  align-self: flex-start !important;
+}
+
+.is-align-self-flex-end {
+  align-self: flex-end !important;
+}
+
+.is-align-self-center {
+  align-self: center !important;
+}
+
+.is-align-self-baseline {
+  align-self: baseline !important;
+}
+
+.is-align-self-stretch {
+  align-self: stretch !important;
+}
+
+.is-flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.is-flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.is-flex-grow-2 {
+  flex-grow: 2 !important;
+}
+
+.is-flex-grow-3 {
+  flex-grow: 3 !important;
+}
+
+.is-flex-grow-4 {
+  flex-grow: 4 !important;
+}
+
+.is-flex-grow-5 {
+  flex-grow: 5 !important;
+}
+
+.is-flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.is-flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.is-flex-shrink-2 {
+  flex-shrink: 2 !important;
+}
+
+.is-flex-shrink-3 {
+  flex-shrink: 3 !important;
+}
+
+.is-flex-shrink-4 {
+  flex-shrink: 4 !important;
+}
+
+.is-flex-shrink-5 {
+  flex-shrink: 5 !important;
+}
+
 .is-clearfix::after {
   clear: both;
   content: " ";
@@ -13283,6 +13522,10 @@ a.has-text-danger-dark:focus {
   box-shadow: none !important;
 }
 
+.is-clickable {
+  cursor: pointer !important;
+}
+
 .is-clipped {
   overflow: hidden !important;
 }
@@ -13297,6 +13540,10 @@ a.has-text-danger-dark:focus {
 
 .is-paddingless {
   padding: 0 !important;
+}
+
+.m-0 {
+  margin: 0 !important;
 }
 
 .mt-0 {
@@ -13325,6 +13572,10 @@ a.has-text-danger-dark:focus {
   margin-bottom: 0 !important;
 }
 
+.m-1 {
+  margin: 0.25rem !important;
+}
+
 .mt-1 {
   margin-top: 0.25rem !important;
 }
@@ -13349,6 +13600,10 @@ a.has-text-danger-dark:focus {
 .my-1 {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
 }
 
 .mt-2 {
@@ -13377,6 +13632,10 @@ a.has-text-danger-dark:focus {
   margin-bottom: 0.5rem !important;
 }
 
+.m-3 {
+  margin: 0.75rem !important;
+}
+
 .mt-3 {
   margin-top: 0.75rem !important;
 }
@@ -13401,6 +13660,10 @@ a.has-text-danger-dark:focus {
 .my-3 {
   margin-top: 0.75rem !important;
   margin-bottom: 0.75rem !important;
+}
+
+.m-4 {
+  margin: 1rem !important;
 }
 
 .mt-4 {
@@ -13429,6 +13692,10 @@ a.has-text-danger-dark:focus {
   margin-bottom: 1rem !important;
 }
 
+.m-5 {
+  margin: 1.5rem !important;
+}
+
 .mt-5 {
   margin-top: 1.5rem !important;
 }
@@ -13453,6 +13720,10 @@ a.has-text-danger-dark:focus {
 .my-5 {
   margin-top: 1.5rem !important;
   margin-bottom: 1.5rem !important;
+}
+
+.m-6 {
+  margin: 3rem !important;
 }
 
 .mt-6 {
@@ -13481,6 +13752,10 @@ a.has-text-danger-dark:focus {
   margin-bottom: 3rem !important;
 }
 
+.p-0 {
+  padding: 0 !important;
+}
+
 .pt-0 {
   padding-top: 0 !important;
 }
@@ -13505,6 +13780,10 @@ a.has-text-danger-dark:focus {
 .py-0 {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
 }
 
 .pt-1 {
@@ -13533,6 +13812,10 @@ a.has-text-danger-dark:focus {
   padding-bottom: 0.25rem !important;
 }
 
+.p-2 {
+  padding: 0.5rem !important;
+}
+
 .pt-2 {
   padding-top: 0.5rem !important;
 }
@@ -13557,6 +13840,10 @@ a.has-text-danger-dark:focus {
 .py-2 {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
+}
+
+.p-3 {
+  padding: 0.75rem !important;
 }
 
 .pt-3 {
@@ -13585,6 +13872,10 @@ a.has-text-danger-dark:focus {
   padding-bottom: 0.75rem !important;
 }
 
+.p-4 {
+  padding: 1rem !important;
+}
+
 .pt-4 {
   padding-top: 1rem !important;
 }
@@ -13611,6 +13902,10 @@ a.has-text-danger-dark:focus {
   padding-bottom: 1rem !important;
 }
 
+.p-5 {
+  padding: 1.5rem !important;
+}
+
 .pt-5 {
   padding-top: 1.5rem !important;
 }
@@ -13635,6 +13930,10 @@ a.has-text-danger-dark:focus {
 .py-5 {
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
+}
+
+.p-6 {
+  padding: 3rem !important;
 }
 
 .pt-6 {
@@ -14575,6 +14874,8 @@ a.has-text-danger-dark:focus {
     visibility: hidden !important;
   }
 }
+
+/* Bulma Layout */
 
 .hero {
   align-items: stretch;
@@ -15775,7 +16076,7 @@ input[type=radio],
 
 @media screen and (max-width: 599px) {
   .navbar {
-    grid-template-columns: fit-content(70px) 1fr fit-content(35px);
+    grid-template-columns: fit-content(70px) fit-content(35px) 1fr fit-content(35px);
   }
 }
 
@@ -15792,15 +16093,29 @@ input[type=radio],
 }
 
 .navbar__logo {
-  width: 70px !important;
+  width: 35px !important;
 }
 
 .navbar__avatar {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-  .navbar__icon {
+.navbar__icon {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 767px) {
+  .navbar__icon--auth {
+    display: none;
+  }
+}
+
+.navbar__link-name {
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 599px) {
+  .navbar__link-name {
     display: none;
   }
 }
@@ -15812,18 +16127,17 @@ input[type=radio],
   justify-content: space-around;
 }
 
-@media screen and (max-width: 599px) {
-  .navbar__link {
-    display: none;
-  }
-}
-
 .navbar__link:last-child {
   margin-left: 2.5rem;
 }
 
 .navbar__link:hover {
   font-weight: 700;
+}
+
+.navbar__link--project {
+  display: flex;
+  align-items: center;
 }
 
 .navbar__link--is-active {

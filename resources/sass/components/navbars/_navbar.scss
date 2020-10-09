@@ -11,7 +11,7 @@
     column-gap: 1.5rem;
 
     @media screen and (max-width: 600px - 1px) {
-        grid-template-columns: fit-content(70px) 1fr fit-content(35px);
+        grid-template-columns: fit-content(70px) fit-content(35px) 1fr fit-content(35px);
     }
 
     @media screen and (min-width: 600px) {
@@ -23,18 +23,26 @@
     }
 
     &__logo {
-        width: 70px !important;
+        width: 35px !important;
     }
 
     &__avatar {
-        // height: 35px;
-        // width: 35px;
-        // object-fit: cover;
         cursor: pointer;
     }
 
     &__icon {
-        @media screen and (min-width: 768px) {
+        font-size: 20px;
+
+        &--auth {
+            @media screen and (min-width: 768px - 1px) {
+                display: none;
+            }
+        }
+    }
+
+    &__link-name {
+        margin-left: 1rem;
+        @media screen and (max-width: 600px - 1px) {
             display: none;
         }
     }
@@ -45,15 +53,16 @@
         display: flex;
         justify-content: space-around;
 
-        @media screen and (max-width: 600px - 1px) {
-            display: none;
-        }
-
         &:last-child {
             margin-left: 2.5rem;
         }
         &:hover {
             font-weight: 700;
+        }
+
+        &--project {
+            display: flex;
+            align-items: center;
         }
 
         &--is-active {
