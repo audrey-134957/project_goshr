@@ -19,12 +19,12 @@
         &--submit {
             float: right;
             margin-top: 1rem;
-            border-color: green;
-            color: green;
+            border-color: #167503;
+            color: #167503;
 
             &:hover {
-                color: green;
-                border-color: green;
+                color: #167503;
+                border-color: #167503;
                 background-color: darken(#fff, 1%);
             }
         }

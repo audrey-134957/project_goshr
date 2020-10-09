@@ -16295,7 +16295,7 @@ input[type=radio],
 }
 
 .project-card__difficulty-level--easy {
-  background-color: green;
+  background-color: #167503;
 }
 
 .project-card__difficulty-level--medium {
@@ -16835,7 +16835,7 @@ input[type=radio],
 }
 
 .project-article__difficulty-level--easy {
-  background-color: green;
+  background-color: #167503;
 }
 
 .project-article__difficulty-level--medium {
@@ -17763,13 +17763,13 @@ input[type=radio],
 .comments-section__button--submit {
   float: right;
   margin-top: 1rem;
-  border-color: green;
-  color: green;
+  border-color: #167503;
+  color: #167503;
 }
 
 .comments-section__button--submit:hover {
-  color: green;
-  border-color: green;
+  color: #167503;
+  border-color: #167503;
   background-color: #fcfcfc;
 }
 
@@ -17814,13 +17814,13 @@ input[type=radio],
 .topics-section__button--submit {
   float: right;
   margin-top: 1rem;
-  border-color: green;
-  color: green;
+  border-color: #167503;
+  color: #167503;
 }
 
 .topics-section__button--submit:hover {
-  color: green;
-  border-color: green;
+  color: #167503;
+  border-color: #167503;
   background-color: #fcfcfc;
 }
 
@@ -18211,8 +18211,8 @@ input[type=radio],
 
 .project-form__categories-list input[type=radio]:checked ~ span,
 .project-form__difficulty-levels-list input[type=radio]:checked ~ span {
-  border: solid 2px green;
-  color: green;
+  border: solid 2px #167503;
+  color: #167503;
 }
 
 .project-form .thumbnail-field-box__label {
@@ -18337,13 +18337,13 @@ input[type=radio],
 }
 
 .project-form__button--submit {
-  border: solid 1px green;
-  color: green;
+  border: solid 1px #167503;
+  color: #167503;
   margin-top: 1rem;
 }
 
 .project-form__button--submit:hover {
-  background-color: green;
+  background-color: #167503;
   color: white;
 }
 
