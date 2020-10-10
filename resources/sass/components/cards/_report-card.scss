@@ -1,18 +1,18 @@
 .report-card {
     max-width: 70rem;
     margin: 1rem;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 
     &__motives-box {
         margin-top: 1rem;
     }
 
-    &__tag {
+    &__tag.tag {
         margin: 0.4rem;
         white-space: normal;
         height: fit-content;
         padding: 0.2rem 1rem;
+        white-space: break-spaces;
     }
 }
 

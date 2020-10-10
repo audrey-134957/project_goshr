@@ -16057,6 +16057,7 @@ input[type=radio],
   width: 100%;
   padding: 1in 0;
   padding: 1rem 3%;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -17566,13 +17567,14 @@ input[type=radio],
   margin-top: 1rem;
 }
 
-.report-card__tag {
+.report-card__tag.tag {
   margin: 0.4rem;
   white-space: normal;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.2rem 1rem;
+  white-space: break-spaces;
 }
 
 .reports-infos {
@@ -18611,7 +18613,6 @@ input[type=radio],
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  margin: 2rem 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -18858,6 +18859,7 @@ input[type=radio],
   height: -moz-fit-content;
   height: fit-content;
   padding: 0.2rem 1rem;
+  white-space: break-spaces;
 }
 
 .report-decision-form {

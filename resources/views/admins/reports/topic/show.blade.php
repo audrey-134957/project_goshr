@@ -18,7 +18,7 @@
 
     <div class="report-card__motives-box">
         @foreach($report->motives as $motive)
-        <span class="tag is-rounded is-info is-light">{{$motive->name}}</span>
+        <span class="report-card__tag tag is-rounded is-info is-light">{{$motive->name}}</span>
         @endforeach
     </div>
 </div>
