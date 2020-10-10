@@ -16796,6 +16796,11 @@ input[type=radio],
   height: 20px !important;
 }
 
+.project-article__duration .project-article__icon,
+.project-article__materials .project-article__icon {
+  margin-right: 0.5rem;
+}
+
 .project-article__tag.tag {
   border-radius: 50px;
   border: solid 1px red;
@@ -17796,7 +17801,6 @@ input[type=radio],
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   text-align: center;
 }
 

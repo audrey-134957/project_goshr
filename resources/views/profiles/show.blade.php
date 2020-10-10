@@ -51,14 +51,6 @@
     }
     @endphp
     <div class="project-card card">
-        <a class="project-card__authors-profile-link" href="{{route('profiles.indexPublishedProjects', ['user' => $project->user])}}" w>
-            <div class="project-card__media-left">
-                <figure class="project-card__image image is-40x40">
-                    <img class="is-rounded" src="{{$project->user->getImage($project->user)}}" alt="Placeholder image">
-                </figure>
-                <small class="project-card__author-username">{{$project->user->username}}</small>
-            </div>
-        </a>
         <div class="project-card__action-buttons-box">
             @auth
             @canany(['update', 'delete'], $project)

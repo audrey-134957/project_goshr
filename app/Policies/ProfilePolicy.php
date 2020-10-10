@@ -45,6 +45,10 @@ class ProfilePolicy
         }
     }
 
+
+    public function view(){
+        return true;
+    }
     /**
      * Determine whether the user can update the profile.
      *

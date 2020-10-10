@@ -29,6 +29,11 @@
         }
     }
 
+    &__duration &__icon,
+    &__materials &__icon{
+        margin-right:0.5rem;
+    }
+
     &__tag.tag {
         border-radius: 50px;
         border: solid 1px red;

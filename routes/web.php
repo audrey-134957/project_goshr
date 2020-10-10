@@ -58,6 +58,14 @@ Route::get('admin/validation/{admin}/{token}', [ValidationController::class, 'va
  */
 Route::get('/deconnexion', [LogoutController::class, 'logout'])->name('logout.create')->middleware('member.or.admin');
 
+/*********** Profile membre ***********/
+
+/**
+ * @description Show the listing of published projects on user's profile
+ * @param user username of user
+ */
+Route::get('/profil-membre/{user}/projets', [ProjectController::class, 'listPublishedProjectsFromProfile'])->name('profiles.indexPublishedProjects');
+
 
 
 /* Routes vues par les invités */
@@ -307,11 +315,11 @@ Route::middleware(['member'])->group(function () {
          */
         Route::patch('/profil-membre/{user}/modifier-mon-compte', [ProfileController::class, 'update'])->name('update');
 
-        /**
-         * @description Show the listing of published projects on user's profile
-         * @param user username of user
-         */
-        Route::get('/profil-membre/{user}/projets', [ProjectController::class, 'listPublishedProjectsFromProfile'])->name('indexPublishedProjects');
+        // /**
+        //  * @description Show the listing of published projects on user's profile
+        //  * @param user username of user
+        //  */
+        // Route::get('/profil-membre/{user}/projets', [ProjectController::class, 'listPublishedProjectsFromProfile'])->name('profiles.indexPublishedProjects');
 
         /**
          * @description Show the listing of drafted projects on user's profile
