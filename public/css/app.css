@@ -16786,6 +16786,11 @@ input[type=radio],
   height: 40px;
 }
 
+.project-article__button--delete {
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .project-article__button--report-modal {
   margin-left: auto;
   margin-right: 0;
@@ -16949,8 +16954,9 @@ input[type=radio],
 
 .project-article__main img {
   width: 100%;
-  max-width: 600px;
-  margin: 1rem 0;
+  max-width: 600px !important;
+  margin: 1rem auto;
+  display: block;
 }
 
 .breadcrumb {
