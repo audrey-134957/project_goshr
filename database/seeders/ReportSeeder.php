@@ -33,7 +33,7 @@ class ReportSeeder extends Seeder
 
         // dd($getHigherContentId);
 
-        for ($i = 1; $i <= 15; $i++) {
+        for ($i = 1; $i <= 5; $i++) {
 
             $user = User::all()->random();
 
@@ -62,10 +62,14 @@ class ReportSeeder extends Seeder
                 ]
             );
 
-            $report = Report::all()->random();
-            $motive = Motive::all()->random();
+        }
 
-            $report->motives()->save($motive);
+
+        $reports = Report::all();
+        $motives = Motive::all();
+
+        foreach($reports as $report){
+            $report->motives()->attach($motives->random()->id);
         }
     }
 }
