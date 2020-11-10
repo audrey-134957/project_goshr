@@ -16,11 +16,11 @@ class Report extends Model
         parent::boot();
 
         self::creating(function ($report) {
-            $report->user_id = auth()->user()->id;
+            // $report->user_id = auth()->user()->id;
         });
 
         self::saving(function ($report) {
-            $report->user_id = auth()->user()->id;
+            // $report->user_id = auth()->user()->id;
         });
     }
 

@@ -33,7 +33,8 @@ class DatabaseSeeder extends Seeder
             ProjectSeeder::class,
             MaterialSeeder::class,
             CommentSeeder::class,
-            TopicSeeder::class
+            TopicSeeder::class,
+            ReportSeeder::class
         ]);
     }
 }

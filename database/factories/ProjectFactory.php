@@ -97,20 +97,15 @@ $randomNumber = $this->faker->numberBetween(1,35);
         return [
             'user_id' => $user->id,
             'title' => $this->faker->sentence(),
-            // 'category_id' => Category::all()->random()->id,
             'category_id' => $projectCatId,
             'id_number' => $pIdentifier,
             'duration' => $duration,
-            // 'thumbnail' => $this->faker->image(public_path('/projets/'. $user->username .'/projets_'.$pIdentifier) ,400,300, null, false) , 
-            // 'thumbnail' => Storage::disk('public')->copy('images_faker', $storagePath),
             'thumbnail' => $imageName,
             'difficulty_level_id' => DifficultyLevel::all()->random()->id,
             'unity_of_measurement_id' => UnityOfMeasurement::all()->random()->id,
             'status_id' => Status::all()->random()->id,
             'budget' => $this->faker->numberBetween(1, 99),
             'content' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui obcaecati earum exercitationem a amet nobis debitis necessitatibus tenetur, nulla illum voluptate, sit asperiores voluptatem consequuntur mollitia porro sunt ullam atque explicabo ratione illo saepe sint velit. Facere fugiat beatae numquam, ullam cum quo recusandae.'
-
-
         ];
     }
 }

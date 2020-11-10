@@ -32,6 +32,8 @@ class UserFactory extends Factory
             'username' => $this->faker->userName,
             'password' =>  bcrypt('k&|X+a45*2['),
             'rank_id' => 2,
+            'token' => NULL,
+            'email_verified_at' => NULL,
             'token_account' =>str_replace('/', '$', $token_account)
         ];
     }

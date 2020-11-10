@@ -19,7 +19,6 @@ class Project extends Model
         parent::boot();
 
         self::creating(function ($project) {
-            // $project->user_id = auth()->user()->id;
 
             $tokenProject = bcrypt(Str::random(60));
             $tokenProjectDraft = bcrypt(Str::random(60));
