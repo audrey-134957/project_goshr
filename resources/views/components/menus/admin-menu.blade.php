@@ -58,6 +58,14 @@
                 </a>
             </li>
             <hr>
+            <!-- * Catégories * -->
+            <li class="admin-menu__item admin-menu__item--category">
+                <a href="{{route('admin.indexCategories', ['adminId' => auth()->user()->id])}}" class="admin-menu__link">
+                    <i class="admin-menu__icon fa fa-tags" aria-hidden="true"></i>
+                    <span class="admin-menu__link-name">Catégories</span>
+                </a>
+            </li>
+            <hr>
             <!-- * Compets administrateurs * -->
             @if(auth()->user()->role->name === 'Super administrateur')
             <li class="admin-menu__item admin-menu__item--category">
@@ -76,14 +84,6 @@
                     </a>
                 </li>
             </ul>
-            <hr>
-            <!-- * Catégories * -->
-            <li class="admin-menu__item admin-menu__item--category">
-                <a href="{{route('admin.indexCategories', ['adminId' => auth()->user()->id])}}" class="admin-menu__link">
-                    <i class="admin-menu__icon fa fa-tags" aria-hidden="true"></i>
-                    <span class="admin-menu__link-name">Catégories</span>
-                </a>
-            </li>
             <hr>
             @endif
         </ul>

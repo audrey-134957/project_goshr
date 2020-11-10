@@ -30,7 +30,7 @@ class CategoryPolicy
      */
     public function create(User $user)
     {
-        if ($user->role_id === 2) {
+        if ($user->role_id !== NULL) {
             return true;
         }
     }
@@ -43,7 +43,7 @@ class CategoryPolicy
      */
     public function update(User $user)
     {
-        if ($user->role_id === 2) {
+        if ($user->role_id !== NULL) {
             return true;
         }
     }
@@ -56,7 +56,7 @@ class CategoryPolicy
      */
     public function delete(User $user)
     {
-        if ($user->role_id === 2) {
+        if ($user->role_id !== NULL) {
             return true;
         }
     }
