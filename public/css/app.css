@@ -16203,6 +16203,7 @@ input[type=radio],
 
 .project-card {
   max-width: 20rem;
+  height: 35rem;
   border-radius: 20px;
   position: relative;
   margin: auto;
