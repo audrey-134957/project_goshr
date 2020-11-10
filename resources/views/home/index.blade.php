@@ -14,6 +14,7 @@
 
 @section('layout-content')
 
+
 <div class="projects-list">
 
     <h1 class="projects-list__title title">Découvrez les nouveaux projets</h1>

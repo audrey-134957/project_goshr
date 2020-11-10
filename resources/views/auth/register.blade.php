@@ -41,6 +41,7 @@
                 <div class="control">
                     <input class="auth-box__input input @error('password') is-danger @enderror is-rounded" type="password" name="password">
                 </div>
+                <small>Le mot de passe doit contenir au moins 6 caractères comprenant au moins une minuscule, une majuscule, un chiffre et un symbole.</small>
                 @error('password')
                 <p class="help is-danger">{{ $message }}</p>
                 @enderror
@@ -57,7 +58,7 @@
                 @enderror
             </div>
 
-            <small class="auth-box__certification"><i class="auth-box__certification-icon fa fa-check-circle-o" aria-hidden="true"></i> je certifie avoir plus de 16 ans lors de mon inscription sur le site.</small>
+            <small class="auth-box__certification"><i class="auth-box__certification-icon fa fa-check-circle-o" aria-hidden="true"></i> Je certifie avoir plus de 16 ans lors de mon inscription sur le site.</small>
             <button class="auth-box__button auth-box__button--is-submit button is-rounded" type="submit">inscription</button>
         </form>
         <hr>

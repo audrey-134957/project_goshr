@@ -16318,7 +16318,7 @@ input[type=radio],
 
 .project-card__content p,
 .project-card__content p span {
-  text-align: left;
+  text-align: left !important;
   font-size: 16px !important;
 }
 

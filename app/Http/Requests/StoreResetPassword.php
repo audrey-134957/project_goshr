@@ -24,7 +24,8 @@ class StoreResetPassword extends FormRequest
     public function rules()
     {
         return [
-            'password' => 'required|min:6|confirmed'
+            'password'  => ['required', 'min:6', 'max:25', 'confirmed', 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/', 'different:email']
+
         ];
     }
 
@@ -34,8 +35,11 @@ class StoreResetPassword extends FormRequest
 
         return [
             'password.required'     => 'Ton mot de passe est requis.',
-            'password.min'          => 'Ton mot de passe doit faire au minimum :min caractères',
-            'password.confirmed'    => 'Les deux mots de passe ne correspondent pas.'
+            'password.min'          => 'Ton mot de passe doit faire au minimum :min caractères.',
+            'password.confirmed'    => 'Les deux mots de passe ne correspondent pas.',
+            'password.regex'        => 'Le mot de passe doit contenir au moins une minuscule,une majuscule, un chiffre et un symbole.',
+            'password.different'    => 'Le mot de passe ne peut pas être ton email.'
+
         ];
     }
 }

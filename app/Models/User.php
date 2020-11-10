@@ -13,12 +13,14 @@ use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
 use Illuminate\Support\Facades\Storage;
 use App\Notifications\SendEmailToUserReferingToDeletingProfile;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Str;
 
 class User extends Model implements Authenticatable
 {
     use Notifiable;
     use BasicAuthenticatable;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.

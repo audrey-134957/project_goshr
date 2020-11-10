@@ -29,7 +29,7 @@ class StoreRegister extends FormRequest
         return [
             'username'  => 'required|min:3|max:80|alpha_dash|unique:users,username',
             'email'     => ['required', 'email', 'unique:users,email', new ValidateEmail()],
-            'password'  => 'required|min:6|max:25|confirmed'
+            'password'  => ['required', 'min:6', 'max:25', 'confirmed', 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/', 'different:email']
         ];
     }
 
@@ -49,7 +49,9 @@ class StoreRegister extends FormRequest
             'password.required'         => 'Un mot de passe est requis.',
             'password.min'              => 'Ton mot de passe doit contenir au minimum :min caractères.',
             'password.max'              => 'Ton mot de passe doit contenir au maximum :min caractères.',
-            'password.confirmed'        => 'Les deux mots de passe ne correspondent pas.'
+            'password.confirmed'        => 'Les deux mots de passe ne correspondent pas.',
+            'password.regex'            => 'Le mot de passe doit contenir au moins une minuscule,une majuscule, un chiffre et un symbole.',
+            'password.different'        => 'Le mot de passe ne peut pas être ton email.'
 
         ];
     }

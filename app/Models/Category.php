@@ -14,7 +14,6 @@ use Carbon\Carbon;
 class Category extends Model
 {
 
-
     protected $guarded = [];
 
     public static function boot()

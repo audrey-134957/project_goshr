@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
+
+    use HasFactory;
+
+
     protected $guarded = [];
 
 
@@ -19,7 +24,7 @@ class Topic extends Model
         parent::boot();
 
         self::creating(function ($topic) {
-            $topic->user_id = auth()->user()->id;
+            // $topic->user_id = auth()->user()->id;
         });
 
         self::updating(function ($topic) {

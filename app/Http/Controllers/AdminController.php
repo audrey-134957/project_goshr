@@ -60,7 +60,7 @@ class AdminController extends Controller
                 $imagePath = $request->avatar->storeAs($storagePath,  $new_name, 'public');
             }
             //je viens redimensionner mon image
-            $image = Image::make(public_path("/storage/{$imagePath}"))->fit(350, 350);
+            $image = Image::make(public_path("storage/{$imagePath}"))->fit(350, 350);
             //je vais stoker mon image
             $image->save();
             // je mets à jour le profil de l'admin

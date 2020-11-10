@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Support\Facades\Storage;
@@ -9,6 +10,7 @@ use Illuminate\Support\Str;
 
 class Project extends Model
 {
+    use HasFactory;
 
     protected $guarded = [];
 
@@ -17,19 +19,19 @@ class Project extends Model
         parent::boot();
 
         self::creating(function ($project) {
-            $project->user_id = auth()->user()->id;
+            // $project->user_id = auth()->user()->id;
 
             $tokenProject = bcrypt(Str::random(60));
             $tokenProjectDraft = bcrypt(Str::random(60));
 
-
             session(['project_identifier' => $project->id_number]);
             $identifier = session('project_identifier');
 
-            $storagePath = 'projets/' . $project->user->username . '/projet_' . $identifier . '/thumbnail/';
+            $storagePath = 'public/projets/' . $project->user->username . '/projet_' . $identifier . '/thumbnail';
+
 
             if (!Storage::exists($storagePath)) {
-                // ... je récupère mon image que je vais stoker dans le dossier avatars/[nom-de-l'utilisateur] dans le storage local 'public/'
+            //     // ... je récupère mon image que je vais stoker dans le dossier avatars/[nom-de-l'utilisateur] dans le storage local 'public/'
                 Storage::makeDirectory($storagePath);
             }
 

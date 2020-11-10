@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Project;
 use CategorySeeder;
 use DifficultyLevelSeeder;
 use Illuminate\Database\Seeder;
@@ -29,6 +30,10 @@ class DatabaseSeeder extends Seeder
             StatusSeeder::class,
             UnitiesOfMeasurementSeeder::class,
             UserSeeder::class,
+            ProjectSeeder::class,
+            MaterialSeeder::class,
+            CommentSeeder::class,
+            TopicSeeder::class
         ]);
     }
 }

@@ -1,5 +1,5 @@
 <nav class="navbar">
-    <a href="@auth {{route('projects.index')}} @else {{route('home.index')}} @endauth"><img class="navbar__logo" style="width:30px;" src="{{asset('./images/logo/logo-r.png')}}" alt=""></a>
+    <a href="@auth {{route('projects.index')}} @else {{route('home.index')}} @endauth"><img class="navbar__logo" src="{{asset('images/logo/logo.png')}}" alt=""></a>
 
 
     <a href="{{ route('projects.index') }}" class="navbar__link navbar__link--project {{ request()->route()->named('projects.*') ? 'navbar__link--is-active' : '' }}">
